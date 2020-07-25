@@ -1,0 +1,21 @@
+{
+  "name": "Aes Studio - Challenge - valid chess Knight Moves",
+  "short_name": "Valid Chess Knight Moves",
+  "icons": [
+    {
+      "src": "/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#06092B",
+  "description": "A challenge for a position at AE Studio",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#06092B"
+}
