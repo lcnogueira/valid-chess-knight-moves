@@ -9,6 +9,7 @@ interface ResponseData<T> extends Response {
   json<T>(): Promise<T>
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare function fetch<T>(...args: any): Promise<ResponseData<T>>
 
 /**

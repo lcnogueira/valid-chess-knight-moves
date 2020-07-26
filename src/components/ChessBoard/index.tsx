@@ -19,7 +19,7 @@ const ChessBoard: React.FC = () => {
 
   return (
     <>
-      {error && <S.ErrorMessage>{error}</S.ErrorMessage>}
+      {error && <S.ErrorMessage data-testid={'error'}>{error}</S.ErrorMessage>}
       <S.BoardGrid>
         {lines.map((line, lineIndex) =>
           columns.map((column, columnIndex) => {

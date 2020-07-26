@@ -10,8 +10,8 @@ interface Props {
 const Cell: React.FC<Props> = ({
   isOdd,
   onClick,
-  isSelected,
-  isPossiblePosition
+  isSelected = false,
+  isPossiblePosition = false
 }) => {
   let bgColor
 

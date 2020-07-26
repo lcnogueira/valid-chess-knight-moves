@@ -41,6 +41,7 @@
     "@storybook/react": "^5.3.19",
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/react": "^10.4.4",
+    "@testing-library/react-hooks": "^3.4.1",
     "@types/jest": "^26.0.4",
     "@types/node": "^14.0.18",
     "@types/react": "^16.9.41",
@@ -54,12 +55,14 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.5",
+    "fetch-mock": "^9.10.5",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "jest-styled-components": "^7.0.2",
     "lint-staged": "^10.2.11",
     "node-mocks-http": "^1.8.1",
     "prettier": "^2.0.5",
+    "react-test-renderer": "^16.13.1",
     "typescript": "^3.9.6"
   }
 }

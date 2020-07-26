@@ -6,7 +6,7 @@ interface CellData {
 
 export const Cell = styled.button<CellData>`
   ${({ bgColor }) => css`
-    background: var(--${bgColor});
+    background-color: var(--${bgColor});
     height: 0;
     padding-top: 100%;
     border: none;

@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChessBoard /> renders correctly 1`] = `
+.c1 {
+  background-color: var(--orange);
+  height: 0;
+  padding-top: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.c1:hover {
+  opacity: 0.8;
+}
+
+.c2 {
+  background-color: var(--tomato);
+  height: 0;
+  padding-top: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.c2:hover {
+  opacity: 0.8;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows: repeat(8,1fr);
+  width: 100%;
+  max-width: 70rem;
+  border: 1rem solid var(--white);
+}
+
+<div>
+  
+  <div
+    class="c0"
+  >
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+    <button
+      class="c2"
+    />
+    <button
+      class="c1"
+    />
+  </div>
+</div>
+`

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cell /> renders correctly with default props 1`] = `
+.c0 {
+  background-color: var(--tomato);
+  height: 0;
+  padding-top: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.c0:hover {
+  opacity: 0.8;
+}
+
+<div>
+  <button
+    class="c0"
+  />
+</div>
+`
