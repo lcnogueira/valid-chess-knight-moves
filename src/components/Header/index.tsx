@@ -10,7 +10,7 @@ const links = [
 const Header: React.FC = () => {
   const { pathname } = useRouter()
   return (
-    <S.Menu>
+    <S.Header>
       <S.MenuLinks>
         {links.map(({ href, label }) => (
           <S.MenuLinksItem key={href} selected={pathname === href}>
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
           </S.MenuLinksItem>
         ))}
       </S.MenuLinks>
-    </S.Menu>
+    </S.Header>
   )
 }
 

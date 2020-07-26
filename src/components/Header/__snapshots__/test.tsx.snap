@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders correctly 1`] = `
+.c0 {
+  margin: 0 auto;
+  max-width: 128rem;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 10;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 6.5rem;
+  width: 100%;
+}
+
+.c2 {
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 0 5rem;
+  color: var(--orange);
+}
+
+.c2 a:hover {
+  color: var(--orange);
+}
+
+.c3 {
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 0 5rem;
+  color: var(--white);
+}
+
+.c3 a:hover {
+  color: var(--orange);
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <ul
+      class="c1"
+    >
+      <li
+        class="c2"
+      >
+        <a
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="c3"
+      >
+        <a
+          href="/game"
+        >
+          Game
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`
