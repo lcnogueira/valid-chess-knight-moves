@@ -1,9 +1,10 @@
 export const lines = ['8', '7', '6', '5', '4', '3', '2', '1']
 export const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 
-const isValidNumber = (number: string) => lines.includes(number)
+export const isValidNumber = (number: string) => lines.includes(number)
 
-const isValidLetter = (letter: string) => columns.includes(letter)
+export const isValidLetter = (letter: string) =>
+  columns.includes(letter.toUpperCase())
 
 /**
  * The position is valid if componse by letter followed by one number and they both belong to the chess board limit.
