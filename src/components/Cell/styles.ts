@@ -11,8 +11,6 @@ export const Cell = styled.button<CellData>`
     padding-top: 100%;
     border: none;
 
-    cursor: pointer;
-
     :hover {
       opacity: 0.8;
     }

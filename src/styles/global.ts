@@ -26,6 +26,17 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--purple);
     color: var(--white);
   }
+
+  a{
+    text-decoration:none;
+  }
+  ul {
+		list-style: none;
+	}
+  a, button {
+		cursor: pointer;
+    transition: all 0.2s ease;
+	}
 `
 
 export default GlobalStyles
