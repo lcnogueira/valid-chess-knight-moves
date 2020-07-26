@@ -6,7 +6,6 @@ exports[`<ChessBoard /> renders correctly 1`] = `
   height: 0;
   padding-top: 100%;
   border: none;
-  cursor: pointer;
 }
 
 .c1:hover {
@@ -18,7 +17,6 @@ exports[`<ChessBoard /> renders correctly 1`] = `
   height: 0;
   padding-top: 100%;
   border: none;
-  cursor: pointer;
 }
 
 .c2:hover {
