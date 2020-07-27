@@ -8,6 +8,7 @@ export const Header = styled.nav`
   margin: 0 auto;
   max-width: 128rem;
   position: sticky;
+  top: 0;
   z-index: 10;
 `
 
@@ -20,7 +21,7 @@ export const MenuLinks = styled.ul`
 `
 
 export const MenuLinksItem = styled.li<MenuLinksData>`
-  ${({ selected }) => css`
+  ${({ selected, theme: { colors } }) => css`
     font-size: 1.5rem;
     display: flex;
 
@@ -29,10 +30,10 @@ export const MenuLinksItem = styled.li<MenuLinksData>`
       align-items: center;
       font-weight: bold;
       padding: 0 5rem;
-      color: ${selected ? 'var(--orange)' : 'var(--white)'};
+      color: ${selected ? colors.primary : colors.white};
 
       :hover {
-        color: var(--orange);
+        color: ${colors.primary};
       }
     }
   `}

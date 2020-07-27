@@ -1,8 +1,7 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import Header from 'components/Header'
-
-import GlobalStyles from 'styles/global'
+import ThemeProvider from 'styles/ThemeProvider'
 
 function ValidChessMoves({ Component, pageProps }: AppProps) {
   return (
@@ -17,9 +16,10 @@ function ValidChessMoves({ Component, pageProps }: AppProps) {
           content="A challenge for a position at AE Studio"
         />
       </Head>
-      <GlobalStyles />
-      <Header />
-      <Component {...pageProps} />
+      <ThemeProvider>
+        <Header />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   )
 }
