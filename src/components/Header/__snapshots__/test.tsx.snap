@@ -6,6 +6,7 @@ exports[`<Header /> renders correctly 1`] = `
   max-width: 128rem;
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
   z-index: 10;
 }
 
@@ -45,11 +46,11 @@ exports[`<Header /> renders correctly 1`] = `
   align-items: center;
   font-weight: bold;
   padding: 0 5rem;
-  color: var(--orange);
+  color: #ffa500;
 }
 
 .c2 a:hover {
-  color: var(--orange);
+  color: #ffa500;
 }
 
 .c3 {
@@ -71,11 +72,11 @@ exports[`<Header /> renders correctly 1`] = `
   align-items: center;
   font-weight: bold;
   padding: 0 5rem;
-  color: var(--white);
+  color: #fff;
 }
 
 .c3 a:hover {
-  color: var(--orange);
+  color: #ffa500;
 }
 
 <div>
