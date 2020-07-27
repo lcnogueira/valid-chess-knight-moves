@@ -1,4 +1,5 @@
 import * as S from 'styles/Common'
+import StepsWizard from 'components/StepsWizard'
 
 const HomePage = () => (
   <S.Wrapper>
@@ -7,6 +8,7 @@ const HomePage = () => (
       Welcome to valid chess Knight Moves! A challenge for a position at AE
       Studio
     </S.Description>
+    <StepsWizard steps={[]} />
   </S.Wrapper>
 )
 
