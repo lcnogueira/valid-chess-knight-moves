@@ -9,10 +9,10 @@ This project has been created to complete a challenge from [AE Studio](https://a
 - [How This Repository is Organized](#file_folder-how-this-repository-is-organized)
   - [API routes](#api-routes)
   - [Test files](#test-files)
-- [Get Up and Running](#🚀-get-up-and-running)
+- [Get Up and Running](#rocket-get-up-and-running)
   - [Additional commands](#additional-commands)
 - [Running the tests](#test_tube-running-the-tests)
-- [How to Contribute](#🤝-how-to-contribute)
+- [How to Contribute](#handshake-how-to-contribute)
 - [License](#memo-license)
 - [NextJs Boilerplate](#nextjs-boilerplate)
 
@@ -58,7 +58,7 @@ For this particular project, there is only one route: `/api/movement/[position]`
 ### Test files
 All the files whose name are `test.ts` or `test.tsx` will be executed when you run the tests. In most of the cases, you'll find the test file inside the function/page/component that is being tested. However, in some cases, this can't be achieved. For example, we can't insert test files in the pages folder (the framework will try to build the file as a page). For those cases, the test files will be available in the [src/tests](src/tests) folder.
 
-## 🚀 Get Up and Running
+## :rocket: Get Up and Running
 You can run this project on your local environment by following the simple steps bellow:
 
 1. **Clone the project.**
@@ -96,7 +96,7 @@ This project includes unit and snapshot tests. In order to run all of them you c
 - `test:watch`: runs tests in watch mode.
 
 
-## 🤝 How to Contribute
+## :handshake: How to Contribute
 If you want to contribute to this project, please take a look at the [contributing guidelines](CONTRIBUTING.md). It explains the whole process and will help you get set up locally.
 
 ## :memo: License
