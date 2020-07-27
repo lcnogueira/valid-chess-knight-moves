@@ -3,20 +3,20 @@
 This project has been created to complete a challenge from [AE Studio](https://ae.studio/).
 
 ## What's in This Document
-- [The Challenge](#-the-challenge)
-  - [Requirementes](#-requirements)
-- [How the Algorithm Works](#-how-the-algorithm-works)
-- [How This Repository is Organized](#-how-this-repository-is-organized)
-  - [API routes](#-api-routes)
-  - [Test files](#-test-files)
-- [Get Up and Running](#-get-up-and-running)
-  - [Additional commands](#-additional-commands)
-  - [Running the tests](#-running-the-tests)
-- [How to Contribute](#-how-to-contribute)
-- [License](#-license)
-- NextJs Boilerplate](#-nextjs-boilerplate)
+- [The Challenge](#:computer:-the-challenge)
+  - [Requirementes](#requirements)
+- [How the Algorithm Works](#:gear:-how-the-algorithm-works)
+- [How This Repository is Organized](#:file_folder:-how-this-repository-is-organized)
+  - [API routes](#api-routes)
+  - [Test files](#test-files)
+- [Get Up and Running](#🚀-get-up-and-running)
+  - [Additional commands](#additional-commands)
+- [Running the tests](#:test_tube:-running-the-tests)
+- [How to Contribute](#🤝-how-to-contribute)
+- [License](#:memo:-license)
+- [NextJs Boilerplate](#nextjs-boilerplate)
 
-## The Challenge
+## :computer: The Challenge
 Chess is a two-player strategy board game played on a chessboard, a checkered game board with 64 squares/cells arranged in an 8x8 grid. Algebraic notation in chess is a method to map cells using A to H as columns (left to right) and 1 to 8 as rows (bottom to top).
 
 In a chess game there are many different pieces. **In this test we will be using the piece called Knight**. A knight can move either 2 squares horizontally and 1 square vertically OR 2 squares vertically
@@ -97,11 +97,11 @@ This project includes unit and snapshot tests. In order to run all of them you c
 
 
 ## 🤝 How to Contribute
-If you want to contribute to this project, please take a look at the[contributing guidelines](CONTRIBUTING.md). It'll help you get set up locally and explain the whole process.
+If you want to contribute to this project, please take a look at the [contributing guidelines](CONTRIBUTING.md). It explains the whole process and will help you get set up locally.
 
 ## :memo: License
 
-Licensed under the [MIT License]()
+Licensed under the [MIT License](LICENSE).
 
 ### NextJs Boilerplate
 
