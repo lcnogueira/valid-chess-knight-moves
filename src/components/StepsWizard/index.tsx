@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Button from 'components/Button'
 
 import * as S from './styles'
 
@@ -17,15 +18,12 @@ const StepsWizard: React.FC<Props> = ({ steps, showSteps = true }) => {
   return (
     <S.Container>
       <S.ButtonsContainer>
-        <S.NavigationButton onClick={onPrev} disabled={currentStep === 0}>
+        <Button onClick={onPrev} disabled={currentStep === 0} primary>
           Previous
-        </S.NavigationButton>
-        <S.NavigationButton
-          onClick={onNext}
-          disabled={currentStep === steps.length - 1}
-        >
+        </Button>
+        <Button onClick={onNext} disabled={currentStep === steps.length - 1}>
           Next
-        </S.NavigationButton>
+        </Button>
       </S.ButtonsContainer>
       {showSteps && (
         <S.Steps>{`Step ${currentStep + 1}/${steps.length}`}</S.Steps>

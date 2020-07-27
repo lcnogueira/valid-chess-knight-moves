@@ -20,23 +20,6 @@ export const ButtonsContainer = styled.div`
   `}
 `
 
-export const NavigationButton = styled.button`
-  ${({ theme: { colors, border } }) => css`
-    background-color: ${colors.secondary};
-    color: ${colors.white};
-    margin: 1rem;
-    min-width: 15rem;
-    padding: 1rem 2rem;
-    border-radius: ${border.radius};
-    font-size: 1.6rem;
-
-    :hover {
-      background-color: ${colors.white};
-      color: ${colors.secondary};
-    }
-  `}
-`
-
 export const Steps = styled.span`
   margin: 1rem;
   font-size: 2rem;
