@@ -42,7 +42,7 @@ const HomePage = () => (
   <S.Wrapper>
     <S.H1>Valid Chess Knight Moves</S.H1>
     <S.H2>Welcome to valid chess Knight Moves!</S.H2>
-    <StepsWizard steps={[Step1, Step2]} showSteps={false} />
+    <StepsWizard steps={[Step1, Step2]} />
   </S.Wrapper>
 )
 
