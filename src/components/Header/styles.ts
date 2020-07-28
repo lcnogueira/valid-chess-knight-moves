@@ -1,9 +1,5 @@
 import styled, { css } from 'styled-components'
 
-interface MenuLinksData {
-  selected: boolean
-}
-
 export const Header = styled.nav`
   ${({ theme: { colors } }) => css`
     margin: 0 auto;
@@ -23,7 +19,11 @@ export const MenuLinks = styled.ul`
   width: 100%;
 `
 
-export const MenuLinksItem = styled.li<MenuLinksData>`
+type MenuLinksProps = {
+  selected: boolean
+}
+
+export const MenuLinksItem = styled.li<MenuLinksProps>`
   ${({ selected, theme: { colors } }) => css`
     font-size: 1.5rem;
     display: flex;

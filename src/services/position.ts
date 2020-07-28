@@ -1,6 +1,6 @@
 import { apiGet } from './api'
 
-interface PositionsData {
+type PositionsData = {
   positions: string[]
 }
 

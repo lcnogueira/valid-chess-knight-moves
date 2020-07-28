@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyles from './global'
 import theme from './theme'
 
-interface Props {
+type Props = {
   children: ReactNode
 }
 

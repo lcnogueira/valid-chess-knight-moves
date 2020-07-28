@@ -1,7 +1,7 @@
 import * as S from './styles'
 import { useColor } from 'hooks'
 
-interface Props {
+type Props = {
   isOdd: boolean
   onClick: (e: React.MouseEvent) => void
   isSelected: boolean

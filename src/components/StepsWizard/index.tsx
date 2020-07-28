@@ -3,7 +3,7 @@ import Button from 'components/Button'
 
 import * as S from './styles'
 
-interface Props {
+type Props = {
   steps: Array<React.FC>
   showSteps?: boolean
 }

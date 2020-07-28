@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components'
 
-interface ButtonData {
+type Props = {
   primary: boolean
   disabled: boolean
 }
 
-export const StyledButton = styled.button<ButtonData>`
+export const StyledButton = styled.button<Props>`
   ${({ theme: { colors, border }, primary, disabled }) => css`
     margin: 1rem;
     min-width: 15rem;

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import * as S from './styles'
 
-interface Props {
+type Props = {
   children: ReactNode
   onClick: () => void
   disabled?: boolean
