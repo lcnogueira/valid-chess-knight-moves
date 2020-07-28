@@ -1,16 +1,16 @@
 # Contributing to `valid-chess-knight-moves`
 
-As the creators and maintainers of this project, we want to ensure that the project lives and continues to grow and evolve. The evolution of the project should never be blocked by any single person's time. One of the simplest ways of doing this is by encouraging a larger set of shallow contributors. Through this, we hope to mitigate the problems of a project that needs updates but there's no-one who has the power to do so.
+As the creators and maintainers of this project, we want to ensure that the project lives, continues to grow and evolves. The evolution of the project should never be blocked by any single person's time. One of the simplest ways of doing this is by encouraging a larger set of shallow contributors. Through this, we hope to mitigate the problems of a project that needs updates but there's no-one who has the power to do so.
 
 ## Code of Conduct
 
-It's important to note that this repository has a [Code of Conduct](CODE_OF_CONDUCT.md), so, please, follow it in all your interactions with the project.
+It's important to note that this repository has a [Code of Conduct](CODE_OF_CONDUCT.md). So, please follow it in all your interactions with the project.
 
 ## Code contributions
 
 ### How do I set up the project?
 
-First of all, make sure you have [`nodejs`](https://nodejs.org/en/) and [`yarn`](https://yarnpkg.com/) installed. After that, run [`yarn`](https://yarnpkg.com/) in the root of the project to install the dependencies. Edit the code in the `src` folder and run the project in `develop` mode (use `yarn run dev`) to see the changes on `http://localhost:3000` as you code. It's luckily very simple! :wink:
+First of all, make sure you have [`nodejs`](https://nodejs.org/en/) and [`yarn`](https://yarnpkg.com/) installed. After that, run [`yarn`](https://yarnpkg.com/) in the root of the project to install the dependencies. Edit the code in the `src` folder and run the project in `develop` mode (use `yarn run dev`) to see the changes on `http://localhost:3000` as you code. Luckily, it's very simple! :wink:
 
 ### Quick Guide to Contributing
 
@@ -46,8 +46,8 @@ Here is a quick guide to doing code contributions to the project.
 
 ### Guidelines
 
-These contribution guidelines are based on https://github.com/moya/contributors, big thanks to @alloy, @orta et al. for the inspiration and guidance.
+These contribution guidelines are based on https://github.com/moya/contributors. Big thanks to @alloy, @orta et al. for the inspiration and guidance.
 
 ### Contributors
 
-Thank you to all the people who have already contributed to styled-components!
+Thank you to all the people who have already contributed to `valid-chess-knight-moves`!

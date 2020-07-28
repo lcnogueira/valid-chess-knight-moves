@@ -56,10 +56,10 @@ For this particular project, there is only one route: `/api/movement/[position]`
 
 
 ### Test files
-All the files whose name are `test.ts` or `test.tsx` will be executed when you run the tests. In most of the cases, you'll find the test file inside the function/page/component that is being tested. However, in some cases, this can't be achieved. For example, we can't insert test files in the pages folder (the framework will try to build the file as a page). For those cases, the test files will be available in the [src/tests](src/tests) folder.
+All the files whose names are `test.ts` or `test.tsx` will be executed when you run the tests. In most of the cases, you'll find the test file inside the function/page/component that is being tested. However, in some cases, this can't be achieved. For example, we can't insert test files in the pages folder (the framework will try to build the file as a page). For those cases, the test files will be available in the [src/tests](src/tests) folder.
 
 ## :rocket: Get Up and Running
-You can run this project on your local environment by following the simple steps bellow:
+You can run this project on your local environment by following the simple steps below:
 
 1. **Clone the project.**
     ```shell
@@ -90,7 +90,7 @@ You can find additionals commands inside the [package.json](package.json) file:
 - `build-storybook`: creates the build version of storybook.
 
 
-## :test_tube: Running the tests
+## :test_tube: Running the Tests
 This project includes unit and snapshot tests. In order to run all of them you can use one of the following scripts:
 - `test`: runs the tests for all components and pages;
 - `test:watch`: runs tests in watch mode.
