@@ -2,10 +2,11 @@ import styled, { css } from 'styled-components'
 
 interface ButtonData {
   primary: boolean
+  disabled: boolean
 }
 
 export const StyledButton = styled.button<ButtonData>`
-  ${({ theme: { colors, border }, primary }) => css`
+  ${({ theme: { colors, border }, primary, disabled }) => css`
     margin: 1rem;
     min-width: 15rem;
     padding: 1.5rem 2.5rem;
@@ -16,9 +17,18 @@ export const StyledButton = styled.button<ButtonData>`
     background-color: ${primary ? colors.primary : colors.secondary};
     color: ${colors.white};
 
-    :hover {
-      background-color: ${colors.white};
-      color: ${primary ? colors.primary : colors.secondary};
-    }
+    ${disabled &&
+    css`
+      opacity: 0.3;
+      cursor: default;
+    `}
+
+    ${!disabled &&
+    css`
+      :hover {
+        background-color: ${colors.white};
+        color: ${primary ? colors.primary : colors.secondary};
+      }
+    `}
   `}
 `

@@ -11,6 +11,8 @@ interface Props {
 const StepsWizard: React.FC<Props> = ({ steps, showSteps = true }) => {
   const [currentStep, setCurrentStep] = useState(0)
 
+  const Step = steps[currentStep]
+
   const onPrev = () => setCurrentStep((prev) => prev - 1)
 
   const onNext = () => setCurrentStep((prev) => prev + 1)
@@ -26,9 +28,9 @@ const StepsWizard: React.FC<Props> = ({ steps, showSteps = true }) => {
         </Button>
       </S.ButtonsContainer>
       {showSteps && (
-        <S.Steps>{`Step ${currentStep + 1}/${steps.length}`}</S.Steps>
+        <S.Steps>{`Step ${currentStep + 1} / ${steps.length}`}</S.Steps>
       )}
-      {steps[currentStep]}
+      <Step />
     </S.Container>
   )
 }

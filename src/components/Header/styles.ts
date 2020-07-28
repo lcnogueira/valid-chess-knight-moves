@@ -5,11 +5,14 @@ interface MenuLinksData {
 }
 
 export const Header = styled.nav`
-  margin: 0 auto;
-  max-width: 128rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  ${({ theme: { colors } }) => css`
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: ${colors.mainBg};
+    border-bottom: 1px solid ${colors.white};
+  `}
 `
 
 export const MenuLinks = styled.ul`

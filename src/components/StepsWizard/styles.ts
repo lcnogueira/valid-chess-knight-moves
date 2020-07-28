@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 export const Container = styled.div`
   max-width: 70rem;
   width: 100%;
+  margin-top: 2rem 0;
 `
 
 export const ButtonsContainer = styled.div`
@@ -10,8 +11,7 @@ export const ButtonsContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: stretch;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
     @media (min-width: ${screens.small}) {
       flex-direction: row;
@@ -21,6 +21,7 @@ export const ButtonsContainer = styled.div`
 `
 
 export const Steps = styled.span`
-  margin: 1rem;
+  display: block;
+  margin-bottom: 2rem;
   font-size: 2rem;
 `
