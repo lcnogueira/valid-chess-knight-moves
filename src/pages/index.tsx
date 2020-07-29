@@ -41,7 +41,7 @@ const Step2 = () => (
 const HomePage = () => (
   <S.Wrapper>
     <S.H1>Valid Chess Knight Moves</S.H1>
-    <S.H2>Welcome to valid chess Knight Moves!</S.H2>
+    <S.H2>Welcome to Valid Chess Knight Moves!</S.H2>
     <StepsWizard steps={[Step1, Step2]} />
   </S.Wrapper>
 )
