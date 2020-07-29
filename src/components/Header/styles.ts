@@ -1,14 +1,14 @@
 import styled, { css } from 'styled-components'
 
-interface MenuLinksData {
-  selected: boolean
-}
-
 export const Header = styled.nav`
-  margin: 0 auto;
-  max-width: 128rem;
-  position: sticky;
-  z-index: 10;
+  ${({ theme: { colors } }) => css`
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: ${colors.mainBg};
+    border-bottom: 1px solid ${colors.white};
+  `}
 `
 
 export const MenuLinks = styled.ul`
@@ -19,8 +19,12 @@ export const MenuLinks = styled.ul`
   width: 100%;
 `
 
-export const MenuLinksItem = styled.li<MenuLinksData>`
-  ${({ selected }) => css`
+type MenuLinksProps = {
+  selected: boolean
+}
+
+export const MenuLinksItem = styled.li<MenuLinksProps>`
+  ${({ selected, theme: { colors } }) => css`
     font-size: 1.5rem;
     display: flex;
 
@@ -29,10 +33,10 @@ export const MenuLinksItem = styled.li<MenuLinksData>`
       align-items: center;
       font-weight: bold;
       padding: 0 5rem;
-      color: ${selected ? 'var(--orange)' : 'var(--white)'};
+      color: ${selected ? colors.primary : colors.white};
 
       :hover {
-        color: var(--orange);
+        color: ${colors.primary};
       }
     }
   `}

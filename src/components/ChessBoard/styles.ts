@@ -11,5 +11,5 @@ export const BoardGrid = styled.div`
   grid-template-rows: repeat(8, 1fr);
   width: 100%;
   max-width: 70rem;
-  border: 1rem solid var(--white);
+  border: 1rem solid ${({ theme }) => theme.colors.white};
 `

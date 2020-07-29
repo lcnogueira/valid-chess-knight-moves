@@ -9,7 +9,7 @@ interface RequestData extends NextApiRequest {
   query: NextApiRequest['query'] & RequestDataQuery
 }
 
-interface ResponseData {
+type ResponseData = {
   positions: string[]
   message?: string
 }

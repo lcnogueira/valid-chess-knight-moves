@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
 
-interface CellData {
+type Props = {
   bgColor: string
 }
 
-export const Cell = styled.button<CellData>`
+export const Cell = styled.button<Props>`
   ${({ bgColor }) => css`
-    background-color: var(--${bgColor});
+    background-color: ${bgColor};
     height: 0;
     padding-top: 100%;
     border: none;

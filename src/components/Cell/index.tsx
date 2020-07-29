@@ -1,6 +1,7 @@
 import * as S from './styles'
+import { useColor } from 'hooks'
 
-interface Props {
+type Props = {
   isOdd: boolean
   onClick: (e: React.MouseEvent) => void
   isSelected: boolean
@@ -13,14 +14,15 @@ const Cell: React.FC<Props> = ({
   isSelected = false,
   isPossiblePosition = false
 }) => {
+  const { colors } = useColor()
   let bgColor
 
   if (isSelected) {
-    bgColor = 'red'
+    bgColor = colors.red
   } else if (isPossiblePosition) {
-    bgColor = 'green'
+    bgColor = colors.green
   } else {
-    bgColor = isOdd ? 'tomato' : 'orange'
+    bgColor = isOdd ? colors.secondary : colors.primary
   }
 
   return <S.Cell onClick={onClick} bgColor={bgColor} />

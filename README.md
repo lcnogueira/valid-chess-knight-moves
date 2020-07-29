@@ -1,4 +1,4 @@
-# :chess_pawn: Valid Chess Knight Moves
+# :horse_racing: Valid Chess Knight Moves
 
 This project has been created to complete a challenge from [AE Studio](https://ae.studio/).
 
@@ -11,7 +11,7 @@ This project has been created to complete a challenge from [AE Studio](https://a
   - [Test files](#test-files)
 - [Get Up and Running](#rocket-get-up-and-running)
   - [Additional commands](#additional-commands)
-- [Running the tests](#test_tube-running-the-tests)
+- [Running the Tests](#test_tube-running-the-tests)
 - [How to Contribute](#handshake-how-to-contribute)
 - [License](#memo-license)
 - [NextJs Boilerplate](#nextjs-boilerplate)

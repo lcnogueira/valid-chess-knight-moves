@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { render } from 'tests/utils'
 import * as Router from 'next/router'
 import { NextRouter } from 'next/router'
 import Header from '.'
