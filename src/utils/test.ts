@@ -2,7 +2,8 @@ import {
   isAlgebraicNotation,
   isValidPosition,
   isValidIndex,
-  findKnightPossibleMoves
+  findPossiblePositions,
+  getKnightPositions
 } from './helper'
 
 describe('helper methods', () => {
@@ -30,8 +31,8 @@ describe('helper methods', () => {
     expect(isValidIndex(8)).toBeFalsy()
   })
 
-  test('findKnightPossibleMoves returns the posible positions where the knight can move', () => {
-    expect(findKnightPossibleMoves('A8').sort()).toEqual(
+  test('findPossiblePositions returns the posible positions where the piece can move to', () => {
+    expect(findPossiblePositions('knight', 'A8').sort()).toEqual(
       [
         'A4',
         'A6',
@@ -47,5 +48,13 @@ describe('helper methods', () => {
         'E8'
       ].sort()
     )
+    expect(findPossiblePositions('knight', 'A8', 1).sort()).toEqual(
+      ['B6', 'C7'].sort()
+    )
+    expect(findPossiblePositions('invalidPiece', 'A1')).toEqual([])
+  })
+
+  test('getKnightPositions returns the possible positions where the knight can move to', () => {
+    expect(getKnightPositions(['A8']).sort()).toEqual(['C7', 'B6'].sort())
   })
 })

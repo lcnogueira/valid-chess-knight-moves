@@ -1,8 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { isValidPosition, findKnightPossibleMoves } from 'utils/helper'
+import { isValidPosition, findPossiblePositions } from 'utils/helper'
 
 interface RequestDataQuery {
+  piece: string
   position: string
+  turns: string
 }
 
 interface RequestData extends NextApiRequest {
@@ -19,7 +21,7 @@ export default function movementHandler(
   response: NextApiResponse<ResponseData>
 ) {
   const {
-    query: { position },
+    query: { piece, position, turns = '2' },
     method
   } = request
 
@@ -34,7 +36,7 @@ export default function movementHandler(
         })
       }
 
-      positions = findKnightPossibleMoves(position)
+      positions = findPossiblePositions(piece, position, Number(turns))
       response.status(200).json({ positions })
       break
     }

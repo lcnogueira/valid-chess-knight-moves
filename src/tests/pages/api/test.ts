@@ -1,11 +1,12 @@
 import { createMocks } from 'node-mocks-http'
-import handlePosition from 'pages/api/movement/[position]'
+import handlePosition from 'pages/api/piece/[piece]/position/[position]'
 
 describe('/api/movement/[position]', () => {
   test('Returns an error message if position is invalid', async () => {
     const { req, res } = createMocks({
       method: 'GET',
       query: {
+        piece: 'knight',
         position: '1D'
       }
     })
@@ -25,6 +26,7 @@ describe('/api/movement/[position]', () => {
     const { req, res } = createMocks({
       method: 'GET',
       query: {
+        piece: 'knight',
         position: 'A4'
       }
     })

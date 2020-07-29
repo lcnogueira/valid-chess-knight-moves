@@ -36,30 +36,41 @@ export const isValidPosition = (position: string) => {
 export const isValidIndex = (index: number) => index >= 0 && index < 8
 
 /**
- * Returns the knight possible positions.
+ * Returns the possible positions according to the provided piece, current position and number of turns.
+ * @param piece The piece the user is searching the positions for
  * @param position The position the user clicked on
  * @param turns The number of turns the app should search (2 by default)
  */
-export const findKnightPossibleMoves = (
+export const findPossiblePositions = (
+  piece: string,
   position: string,
   turns = 2
 ): string[] => {
-  //First turn
-  let positions = getPositions([position])
+  let positions: string[] = []
 
-  //For each of the next turns
-  for (let turn = 1; turn < turns; turn++) {
-    positions = [...positions, ...getPositions(positions)]
+  //At the moment, we only care about the knight moves. We can include other cases later
+  switch (piece) {
+    case 'knight':
+      //First turn
+      positions = getKnightPositions([position])
+
+      //For each of the next turns
+      for (let turn = 1; turn < turns; turn++) {
+        positions = [...positions, ...getKnightPositions(positions)]
+      }
+      break
+    default:
+      return positions
   }
 
   return positions
 }
 
 /**
- * Returns the possible positions for each one of the provided positions
- * @param positions The possible possitions
+ * Returns the Knight possible positions for each of the provided positions
+ * @param positions The possible positions the algorithm should consider
  */
-export const getPositions = (positions: string[]) => {
+export const getKnightPositions = (positions: string[]) => {
   const auxArray: string[] = []
 
   positions.forEach((position) => {
@@ -82,6 +93,5 @@ export const getPositions = (positions: string[]) => {
       }
     }
   })
-
   return auxArray
 }
