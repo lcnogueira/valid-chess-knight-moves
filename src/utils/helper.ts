@@ -1,12 +1,17 @@
 export const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 export const lines = ['8', '7', '6', '5', '4', '3', '2', '1']
 
-// Knight possible moves
-const columnMovements = [-1, -2, -2, -1, 1, 2, 2, 1]
-const rowMovements = [-2, -1, 1, 2, -2, -1, 1, 2]
-
-// The knight can move, at most, 8 positions
-const possibleKnightMoves = 8
+// Pair [row,column] of movements a knight can do
+const knightMovements = [
+  [-2, -1],
+  [-1, -2],
+  [1, -2],
+  [2, -1],
+  [-2, 1],
+  [-1, 2],
+  [1, 2],
+  [2, 1]
+]
 
 /**
  * It is a valid algebraic notation if composed by one letter followed by one number
@@ -22,7 +27,7 @@ export const isValidPosition = (position: string) => {
   if (
     isAlgebraicNotation(position) &&
     columns.includes(position.charAt(0).toUpperCase()) &&
-    lines.includes(position.charAt(1).toUpperCase())
+    lines.includes(position.charAt(1))
   ) {
     return true
   }
@@ -71,27 +76,27 @@ export const findPossiblePositions = (
  * @param positions The possible positions the algorithm should consider
  */
 export const getKnightPositions = (positions: string[]) => {
-  const auxArray: string[] = []
+  //Use a Set (instead of an array) to avoid insert duplicated values
+  const positionsSet = new Set<string>()
 
   positions.forEach((position) => {
     //Get the index values of the current position
     const columnIndex = columns.indexOf(position.charAt(0))
     const rowIndex = lines.indexOf(position.charAt(1))
 
-    //For each of the possible movements, get a new position
-    for (let movement = 0; movement < possibleKnightMoves; movement++) {
-      const letterIndex = columnIndex + columnMovements[movement]
-      const numberIndex = rowIndex + rowMovements[movement]
+    //For each of the knight movements, get a new position
+    for (let movement = 0; movement < knightMovements.length; movement++) {
+      //Get the next possible position the kgnight can go to
+      const letterIndex = columnIndex + knightMovements[movement][1]
+      const numberIndex = rowIndex + knightMovements[movement][0]
 
-      //Make sure you'll try to access a valid position
+      //Make sure you'll try to access a valid position (inside the chessboard limit)
       if (isValidIndex(letterIndex) && isValidIndex(numberIndex)) {
+        //Get the new position and insert it in the set
         const newPosition = `${columns[letterIndex]}${lines[numberIndex]}`
-        //Only include the new position if it's not in the array yet
-        if (auxArray.indexOf(newPosition) === -1) {
-          auxArray.push(newPosition)
-        }
+        positionsSet.add(newPosition)
       }
     }
   })
-  return auxArray
+  return Array.from(positionsSet)
 }
