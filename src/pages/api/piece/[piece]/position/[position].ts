@@ -1,8 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { isAlgebraicNotation, findKnightPossibleMoves } from 'utils/helper'
+import { isValidPosition, findPossiblePositions } from 'utils/helper'
 
 interface RequestDataQuery {
+  piece: string
   position: string
+  turns: string
 }
 
 interface RequestData extends NextApiRequest {
@@ -19,7 +21,7 @@ export default function movementHandler(
   response: NextApiResponse<ResponseData>
 ) {
   const {
-    query: { position },
+    query: { piece, position, turns = '2' },
     method
   } = request
 
@@ -27,14 +29,14 @@ export default function movementHandler(
     case 'GET': {
       let positions: string[] = []
 
-      if (!isAlgebraicNotation(position)) {
+      if (!isValidPosition(position)) {
         return response.status(400).json({
-          message: 'You should provide a valid algebraic notation',
+          message: 'You should provide a valid position',
           positions
         })
       }
 
-      positions = findKnightPossibleMoves(position)
+      positions = findPossiblePositions(piece, position, Number(turns))
       response.status(200).json({ positions })
       break
     }

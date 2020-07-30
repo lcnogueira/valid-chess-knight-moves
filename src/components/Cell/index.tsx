@@ -6,13 +6,15 @@ type Props = {
   onClick: (e: React.MouseEvent) => void
   isSelected: boolean
   isPossiblePosition: boolean
+  children: string
 }
 
 const Cell: React.FC<Props> = ({
   isOdd,
   onClick,
   isSelected = false,
-  isPossiblePosition = false
+  isPossiblePosition = false,
+  children
 }) => {
   const { colors } = useColor()
   let bgColor
@@ -25,7 +27,11 @@ const Cell: React.FC<Props> = ({
     bgColor = isOdd ? colors.secondary : colors.primary
   }
 
-  return <S.Cell onClick={onClick} bgColor={bgColor} />
+  return (
+    <S.Cell onClick={onClick} bgColor={bgColor}>
+      {children}
+    </S.Cell>
+  )
 }
 
 export default Cell

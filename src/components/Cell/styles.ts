@@ -5,10 +5,16 @@ type Props = {
 }
 
 export const Cell = styled.button<Props>`
-  ${({ bgColor }) => css`
+  ${({ bgColor, theme: { colors } }) => css`
     background-color: ${bgColor};
+    color: ${colors.white};
+    border: none;
+    text-decoration: none;
     height: 0;
-    padding-top: 100%;
+    padding: 50% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
 
     :hover {
