@@ -37,12 +37,12 @@ and 1 square horizontally.
 - The wizard page should be responsive and work on all devices and written in clear English that a non-technical client would be able to understand.
 
 ## :gear: How the Algorithm Works
-In order to build the chess board grid, we have an array of `columns` and an array of `lines` that holds all of the possible posiitons:
+In order to build the chessboard grid, we have an array of `columns` and an array of `lines` that hold all of the possible positions:
 ```js
 const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 const lines = ['8', '7', '6', '5', '4', '3', '2', '1']
 ```
-Besides that, we know already know that the knight piece can move, at most (it depends on the knight current position), **8 positions**. The algorithm has these possible moves defined in 1 array that contains another array (`[row, column]`):
+Besides that, we already know that the knight piece can move, at most (it depends on the knight current position), **8 positions**. The algorithm has these possible moves defined in an array that contains another array (`[row, column]`) on each position:
 ```js
 const knightMovements = [
   [-2, -1], //1st movement
@@ -56,7 +56,7 @@ const knightMovements = [
 ]
 ```
 
-To explain the algorithm, let's say the algorithm received `[C7]` as the starting position. The algorithm will run the steps below:
+To explain it, let's say the algorithm received `[C7]` as the starting position. The algorithm will run the steps below:
 
 1. For each of the `positions` it receives as argument (array of positions), it will find the index of the the characters that compose the position:
     ```js
@@ -65,20 +65,20 @@ To explain the algorithm, let's say the algorithm received `[C7]` as the startin
       const rowIndex = lines.indexOf(position.charAt(1))      //C7 will return 1 as lineIndex
     ```
 
-2. Loops trough the movements array to get the next **possible** move of the knight. To achieve this, on each iteration, it sums the `columnIndex` and `lineIndex` with the current movement value:
+2. Loops through the movements array to get the next **possible** move of the knight. To achieve this, on each iteration, it sums the `columnIndex` and `lineIndex` with the current movement value:
     ```js
     const letterIndex = columnIndex + knightMovements[movement][1]  //1st iteration: 2 + (-1) = 1
     const numberIndex = rowIndex + knightMovements[movement][0]     //1st iteration: 1 + (-2) = -1
     ```
 
-3. Makes sure both values from the step 2 are inside the chessboard limit before inserting it in the list. In the example case, `numberIndex` (-1) is not inside the chessboard limit, since there's no negative index inside the `linesArray`.
+3. Makes sure both values from step 2 are inside the chessboard limit before inserting it in the list. In the example case, `numberIndex` (-1) is not inside the chessboard limit, since there's no negative index inside the `linesArray`.
     ```js
     if (isValidIndex(letterIndex) && isValidIndex(numberIndex)) { //In the example, the numberIndex (-1) is not valid
       //Rest of the code...
     }
     ```
 
-4. In case it'is a valid position (inside the chess board), gets the position from the `columns` and `lines` arrays and saves it by using a `Set` structure (to avoid repeated values):
+4. In case it's a valid position (inside the chessboard), the algorithm gets the position from the `columns` and `lines` arrays and saves it by using a `Set` structure (to avoid repeated values):
     ```js
     if (isValidIndex(letterIndex) && isValidIndex(numberIndex)) {
       const newPosition = `${columns[letterIndex]}${lines[numberIndex]}`
@@ -86,7 +86,7 @@ To explain the algorithm, let's say the algorithm received `[C7]` as the startin
     }
     ```
 
-5. After looping through all of the `positions` received as argument, returns the list of valid positions as an array:
+5. After looping through all of the `positions` received as argument, the algorithm returns the list of valid positions as an array:
     ```js
     return Array.from(positionsSet)
     ```
@@ -115,7 +115,7 @@ The main files of the project can be found in the `src` folder:
 ### API routes
 The API routes can be found in the [src/pages/api](src/pages/api) folder. Any file inside this folder is mapped to `/api/*` and will be treated as an API endpoint instead of a page.
 
-There is only one route so far: `/api/piece/$[piece]/position/[position]`. So, if you want to get the possible positions for the `knight` starting from the position `A1`, you can send a get request to `/api/piece/knight/position/A1`. By default, the route will provide the positions that the piece can move in exactly 2 turns. However, you can switch this behaviour by providing a `turns` query param: `/api/piece/knight/position/A1?turns=3`.
+There is only one route so far: `/api/piece/$[piece]/position/[position]`. So, if you want to get the possible positions for the `knight` piece, starting from the position `A1`, you can send a get request to `/api/piece/knight/position/A1`. By default, the route will provide the positions that the piece can move in exactly 2 turns. However, you can switch this behaviour by providing a `turns` query param: `/api/piece/knight/position/A1?turns=3`.
 
 ### Test files
 All the files whose names are `test.ts` or `test.tsx` will be executed when you run the tests. In most of the cases, you'll find the test file inside the function/page/component that is being tested. However, in some cases, this can't be achieved. For example, we can't insert test files in the pages folder (the framework will try to build the file as a page). For those cases, the test files will be available in the [src/tests](src/tests) folder.

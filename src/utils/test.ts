@@ -15,7 +15,7 @@ describe('helper methods', () => {
     expect(isAlgebraicNotation('A11')).toBeFalsy()
   })
 
-  test(`isValidPosition returns true if it's a valid notation and is in the chess board limit`, () => {
+  test(`isValidPosition returns true if it's a valid notation and is in the chessboard limit`, () => {
     expect(isValidPosition('A1')).toBeTruthy()
     expect(isValidPosition('A8')).toBeTruthy()
     expect(isValidPosition('h1')).toBeTruthy()

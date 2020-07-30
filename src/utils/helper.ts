@@ -20,7 +20,7 @@ const knightMovements = [
 export const isAlgebraicNotation = (position: string) => /^\D\d$/.test(position)
 
 /**
- * The position is valid if is an algebraic notation and both the digits belong to the chess board limit.
+ * The position is valid if is an algebraic notation and both the digits belong to the chessboard limit.
  * @param position The position the user clicked on
  */
 export const isValidPosition = (position: string) => {
