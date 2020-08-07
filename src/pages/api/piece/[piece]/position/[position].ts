@@ -1,14 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { isValidPosition, findPossiblePositions } from 'utils/helper'
 
-interface RequestDataQuery {
-  piece: string
-  position: string
-  turns: string
-}
-
 interface RequestData extends NextApiRequest {
-  query: NextApiRequest['query'] & RequestDataQuery
+  query: {
+    piece: string
+    position: string
+    turns: string
+  }
 }
 
 type ResponseData = {
