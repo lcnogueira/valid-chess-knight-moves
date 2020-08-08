@@ -13,7 +13,9 @@ const DefaultCell = ({
     onClick={onClick}
     isSelected={isSelected}
     isPossiblePosition={isPossiblePosition}
-  />
+  >
+    A8
+  </Cell>
 )
 
 describe('<Cell />', () => {

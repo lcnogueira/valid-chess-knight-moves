@@ -1,5 +1,6 @@
 import * as S from './styles'
 import { useColor } from 'hooks'
+import React from 'react'
 
 type Props = {
   isOdd: boolean
@@ -34,4 +35,4 @@ const Cell: React.FC<Props> = ({
   )
 }
 
-export default Cell
+export default React.memo(Cell)

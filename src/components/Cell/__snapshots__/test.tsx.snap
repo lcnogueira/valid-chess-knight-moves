@@ -31,6 +31,8 @@ exports[`<Cell /> renders correctly with default props 1`] = `
 <div>
   <button
     class="c0"
-  />
+  >
+    A8
+  </button>
 </div>
 `
