@@ -1,5 +1,7 @@
 # :horse_racing: Valid Chess Knight Moves
 
+![ci](https://github.com/lcnogueira/valid-chess-knight-moves/workflows/ci/badge.svg)
+
 This project has been created to complete a challenge from [AE Studio](https://ae.studio/).
 
 ## What's in This Document
