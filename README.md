@@ -1,6 +1,6 @@
 # :horse_racing: Valid Chess Knight Moves
 
-![ci](https://github.com/lcnogueira/valid-chess-knight-moves/workflows/ci/badge.svg)
+![ci](https://github.com/lcnogueira/valid-chess-knight-moves/workflows/ci/badge.svg) [![codecov](https://codecov.io/gh/lcnogueira/valid-chess-knight-moves/branch/master/graph/badge.svg)](https://codecov.io/gh/lcnogueira/valid-chess-knight-moves)
 
 This project has been created to complete a challenge from [AE Studio](https://ae.studio/).
 
