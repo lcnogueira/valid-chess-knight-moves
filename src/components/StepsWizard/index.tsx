@@ -8,7 +8,7 @@ type Props = {
   showSteps?: boolean
 }
 
-const StepsWizard: React.FC<Props> = ({ steps, showSteps = false }) => {
+const StepsWizard = ({ steps, showSteps = false }: Props) => {
   const [currentStep, setCurrentStep] = useState(0)
 
   const Step = steps[currentStep]

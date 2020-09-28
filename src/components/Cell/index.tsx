@@ -10,13 +10,13 @@ type Props = {
   children: string
 }
 
-const Cell: React.FC<Props> = ({
+const Cell = ({
   isOdd,
   onClick,
   isSelected = false,
   isPossiblePosition = false,
   children
-}) => {
+}: Props) => {
   const { colors } = useColor()
   let bgColor
 
