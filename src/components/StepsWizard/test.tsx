@@ -19,16 +19,25 @@ describe('<StepsWizard />', () => {
   it('changes the current step when clicking the buttons', () => {
     render(<DefaultStepsWizard />)
 
+    const next = screen.getByRole('button', { name: /next/i })
+    const previous = screen.getByRole('button', { name: /previous/i })
+
+    expect(next).toBeEnabled()
+    expect(previous).toBeDisabled()
     expect(screen.getAllByTestId('step')).toHaveLength(1)
     expect(screen.getByTestId('step')).toHaveTextContent('Step 1')
 
-    userEvent.click(screen.getByRole('button', { name: /next/i }))
+    userEvent.click(next)
 
+    expect(next).toBeDisabled()
+    expect(previous).toBeEnabled()
     expect(screen.getAllByTestId('step')).toHaveLength(1)
     expect(screen.getByTestId('step')).toHaveTextContent('Step 2')
 
-    userEvent.click(screen.getByRole('button', { name: /previous/i }))
+    userEvent.click(previous)
 
+    expect(next).toBeEnabled()
+    expect(previous).toBeDisabled()
     expect(screen.getAllByTestId('step')).toHaveLength(1)
     expect(screen.getByTestId('step')).toHaveTextContent('Step 1')
   })
