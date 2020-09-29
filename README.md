@@ -127,7 +127,7 @@ You can run this project on your local environment by following the simple steps
 
 1. **Clone the project.**
     ```shell
-    git@github.com:lcnogueira/valid-chess-knight-moves.git
+    git clone git@github.com:lcnogueira/valid-chess-knight-moves.git
     ```
 2. **Install the dependencies**
     ```shell
