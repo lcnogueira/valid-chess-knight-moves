@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from 'tests/utils'
+import { render, screen, userEvent } from 'tests/utils'
 
 import StepsWizard from '.'
 
@@ -22,12 +22,12 @@ describe('<StepsWizard />', () => {
     expect(screen.getAllByTestId('step')).toHaveLength(1)
     expect(screen.getByTestId('step')).toHaveTextContent('Step 1')
 
-    fireEvent.click(screen.getByRole('button', { name: /next/i }))
+    userEvent.click(screen.getByRole('button', { name: /next/i }))
 
     expect(screen.getAllByTestId('step')).toHaveLength(1)
     expect(screen.getByTestId('step')).toHaveTextContent('Step 2')
 
-    fireEvent.click(screen.getByRole('button', { name: /previous/i }))
+    userEvent.click(screen.getByRole('button', { name: /previous/i }))
 
     expect(screen.getAllByTestId('step')).toHaveLength(1)
     expect(screen.getByTestId('step')).toHaveTextContent('Step 1')
@@ -38,7 +38,7 @@ describe('<StepsWizard />', () => {
 
     expect(screen.getByText(/step 1 \/ 2/i)).toBeInTheDocument()
 
-    fireEvent.click(screen.getByRole('button', { name: /next/i }))
+    userEvent.click(screen.getByRole('button', { name: /next/i }))
 
     expect(screen.getByText(/step 2 \/ 2/i)).toBeInTheDocument()
   })

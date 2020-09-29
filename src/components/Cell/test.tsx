@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from 'tests/utils'
+import { render, screen, userEvent } from 'tests/utils'
 
 import Cell from '.'
 
@@ -29,7 +29,7 @@ describe('<Cell />', () => {
     const onClick = jest.fn()
     render(<DefaultCell onClick={onClick} />)
 
-    fireEvent.click(screen.getByRole('button'))
+    userEvent.click(screen.getByRole('button'))
     expect(onClick).toHaveBeenCalledTimes(1)
   })
 })
